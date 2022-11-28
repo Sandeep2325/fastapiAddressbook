@@ -8,6 +8,7 @@ SessionLocal = sessionmaker(autocommit=False,autoflush=False,bind=engine)
 class addresstable(Base):
     __tablename__ = 'address_table'
     id = Column(Integer, primary_key=True)
+    landmark=Column(String(256))
     city = Column(String(256))
     state=Column(String(256))
 Base.metadata.create_all(engine)
