@@ -84,5 +84,5 @@ def searchAddress(search:str,db: Session = Depends(get_db)):#function to get the
 
 @app.get("/location/{location}")
 def search(db: Session = Depends(get_db), search:str = None):#search API to search objects in DB by given input
-    jobs = searchAddress(search, db=db)#passing the searched parameter to the searchAddress function
+    addres = searchAddress(search, db=db)#passing the searched parameter to the searchAddress function
     return jobs 
